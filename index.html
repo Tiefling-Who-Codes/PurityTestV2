@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Purity Test</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+    // Define your firebaseConfig object outside the <script> tag
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJOda2IU8dOm3t6sAEwKOLNZyH4kmBa6Y", // Your API key
+      authDomain: "purity-test-803d3.firebaseapp.com", // Your auth domain
+      databaseURL: "https://purity-test-803d3-default-rtdb.firebaseio.com", // Your database URL
+      projectId: "purity-test-803d3", // Your project ID
+      storageBucket: "purity-test-803d3.appspot.com", // Your storage bucket
+      messagingSenderId: "793571026689", // Your messaging sender ID
+      appId: "1:793571026689:web:b31b91ca11f39f1e355d00" // Your app ID
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore(); 
+    // ... (rest of your JavaScript code) 
+  </script>
+
+  <h1>Welcome to the Purity test</h1>
+  <p>
+    Take this test to see how pure you are,<br> The higher the percentage, the more dirty you are.
+  </p>
+
+  <input type="text" id="userName" placeholder="What is your name?">
+
+  <!-- Add this style for the input -->
+  <style>
+    #userName {
+      background-color: #333; /* Dark background */
+      color: #eee; /* Light text color */
+      border: 1px solid #555; /* Dark border */
+      padding: 8px;
+      font-size: 16px;
+    }
+  </style>
+
+  <h2>Tick the boxes if you ...</h2>
+
+  <div class="q"><input type="checkbox" id="1"> Have been on a date?
+    </input></div>
+  <div class="q"><input type="checkbox" id="2"> Have a bf/gf?</input></div>
+  <div class="q"><input type="checkbox" id="3"> Have an ex?
+    </input></div>
+  <div class="q"><input type="checkbox" id="4"> Had broken up with someone?
+    </input></div>
+  <div class="q"><input type="checkbox" id="5"> Had been broken up with?</input></div>
+
+  <div class="q"><input type="checkbox" id="6"> Had cheated on ur bf/gf?</input></div>
+  <div class="q"><input type="checkbox" id="7"> Had your 1st kiss?</input></div>
+  <div class="q"><input type="checkbox" id="8"> Had made out?</input></div>
+  <div class="q"><input type="checkbox" id="9"> Had masturbated?</input></div>
+  <div class="q"><input type="checkbox" id="10"> Have touched someone sexualy?</input></div>
+
+  <div class="q"><input type="checkbox" id="11"> Have been touched sexualy?</input></div>
+  <div class="q"><input type="checkbox" id="12"> Kissed someone somewhere not on their face?</input></div>
+  <div class="q"><input type="checkbox" id="13"> Have been kissed somewhere that isn't your face?</input></div>
+  <div class="q"><input type="checkbox" id="14"> Vaped?</input></div>
+  <div class="q"><input type="checkbox" id="15"> Vaped in public?</input></div>
+
+  <div class="q"><input type="checkbox" id="16"> Held hands romantically?
+    </input></div>
+  <div class="q"><input type="checkbox" id="17"> Hugged romantically?
+    </input></div>
+  <div class="q"><input type="checkbox" id="18"> Said ily to a non family member/homie?
+    </input></div>
+  <div class="q"><input type="checkbox" id="19"> Flashed or in any other way expose yourself to someone?
+    </input></div>
+  <div class="q"><input type="checkbox" id ="20"> Had a crush?
+    </input></div>
+
+  <div class="q"><input type="checkbox" id="21"> Have been rejected?
+    </input></div>
+  <div class="q"><input type="checkbox" id="23"> Have sworn </input></div>
+  <div class="q"><input type="checkbox" id="23"> Had failed an important test or assignment?
+    </input></div>
+  <div class="q"><input type="checkbox" id="24">Have gotten suspended?</input></div>
+  <div class="q"><input type="checkbox" id="25"> Had an argument?
+    </input></div>
+
+  <div class="q"><input type="checkbox" id="26"> Had a physical fight?</input></div>
+  <div class="q"><input type="checkbox" id="27"> Purposely excluded someone?
+    </input></div>
+  <div class="q"><input type="checkbox" id="28"> Lied about your sexuality?
+    </input></div>
+  <div class="q"><input type="checkbox" id="29">Masturbated to a picture of someone?
+    </input></div>
+  <div class="q"><input type="checkbox" id="30"> Had a sleepover with someone u were attracted to?</input></div>
+
+  <div class="q"><input type="checkbox" id="31"> Have been flashed or seen someone otherwise exposed?
+    </input></div>
+  <div class="q"><input type="checkbox" id="32"> Lied to ur parents?
+    </input></div>
+  <div class="q"><input type="checkbox" id="33"> Snuck out?
+    </input></div>
+  <div class="q"><input type="checkbox" id="34"> Took mugs of someone?</input></div>
+  <div class="q"><input type="checkbox" id="35"> Had gotten expelled?
+    </input></div>
+
+  <div class="q"><input type="checkbox" id="36"> Got in trouble at school?
+    </input></div>
+  <div class="q"><input type="checkbox" id="37"> Got grounded
+    </input></div>
+  <div class="q"><input type="checkbox" id="38"> Got your phone/electronics taken away?
+    </input></div>
+  <div class="q"><input type="checkbox" id="39"> Had broken a bone?
+    </input></div>
+  <div class="q"><input type="checkbox" id="40"> Drank alcohol?
+    </input></div>
+
+  <div class="q"><input type="checkbox" id="41"> Had a wet dream?
+</input></div>
+  <div class="q"><input type="checkbox" id="42"> Had a sexual dream?
+</input></div>
+  <div class="q"><input type="checkbox" id="43"> Had a sexual day dream?
+</input></div>
+  <div class="q"><input type="checkbox" id="44"> Used sexual innuendo?
+</input></div>
+  <div class="q"><input type="checkbox" id="45"> Have been racist?
+ </input></div>
+
+  <div class="q"><input type="checkbox" id="46"> Have been homophobic?
+ </input></div>
+  <div class="q"><input type="checkbox" id="47"> Have been sexist?
+ </input></div>
+  <div class="q"><input type="checkbox" id="48"> Have taken nude pictures of yourself?
+</input></div>
+  <div class="q"><input type="checkbox" id="49"> Pressured someone into doing something they didn't want to?
+</input></div>
+  <div class="q"><input type="checkbox" id="50"> Lied to impress someone?
+</input></div>
+
+
+
+
+
+  <h3>Number of checked checkboxes: <span id="checkedCount">0</span></h3>
+  <h3>Percent: <span id="percent">0</span></h3>
+  <p id="message"></p> "
+
+  <h2>Dirtiest & Purest</h2>
+  <p>Add your name in the input above and answer the questions to check to see if you can be the dirtiest or the purest person to answer this test. </p>
+
+
+  <button id="sendButton">View Results</button> 
+  <button id="LeaderBoard">Show Scores</button>
+
+  <h3 id = "Dirtiest"></h3>
+
+  <h3 id="Purest"></h3>
+  
+  <h2><b>Credits</b></h2>
+  <h3>
+    Question creator: Soph <br>
+    Programmer : Adrian
+  </h3>
+  
+
+
+  
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
