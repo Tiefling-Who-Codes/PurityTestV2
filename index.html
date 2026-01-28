@@ -9,25 +9,24 @@
 </head>
 
 <body>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script>
-    // Define your firebaseConfig object outside the <script> tag
-   const firebaseConfig = {
-    apiKey: "AIzaSyBJOda2IU8dOm3t6sAEwKOLNZyH4kmBa6Y",
-    authDomain: "purity-test-803d3.firebaseapp.com",
-    databaseURL: "https://purity-test-803d3-default-rtdb.firebaseio.com",
-    projectId: "purity-test-803d3",
-    storageBucket: "purity-test-803d3.firebasestorage.app",
-    messagingSenderId: "793571026689",
-    appId: "1:793571026689:web:b31b91ca11f39f1e355d00"
-  };
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+    // Define your firebaseConfig object
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJOda2IU8dOm3t6sAEwKOLNZyH4kmBa6Y",
+      authDomain: "purity-test-803d3.firebaseapp.com",
+      databaseURL: "https://purity-test-803d3-default-rtdb.firebaseio.com",
+      projectId: "purity-test-803d3",
+      storageBucket: "purity-test-803d3.firebasestorage.app",
+      messagingSenderId: "793571026689",
+      appId: "1:793571026689:web:b31b91ca11f39f1e355d00"
+    };
 
     // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore(); 
-    // ... (rest of your JavaScript code) 
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app);
   </script>
 
   <h1>Welcome to the Purity test</h1>
@@ -171,7 +170,7 @@
 
 
   
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
   
 </body>
 
